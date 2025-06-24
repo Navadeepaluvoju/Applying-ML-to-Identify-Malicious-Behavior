@@ -1,30 +1,83 @@
 ### Requirements: URL Phishing Attack Using Machine Learning
+
+# 🧠 NLP Prediction Web App
+
+This project is a **Flask-based web application** that enables users to input data and receive real-time predictions using **Natural Language Processing (NLP)** and **Logistic Regression**. The app includes a login system, home dashboard, and a detection page for analyzing user input—perfect for text classification tasks like sentiment analysis or spam detection.
+
+## 🚀 Features
+
+- User Login & Session Management
+- Clean UI for text input
+- Text preprocessing using NLP techniques
+- Prediction using a Logistic Regression model trained on sample data
+- Result display with redirect and error handling
+
+## 🛠️ Tech Stack
+
+- **Python**, **Flask**
+- **Pandas**, **NumPy**
+- **Scikit-learn** (for Logistic Regression model)
+- **HTML/CSS**
+- Local file-based model loading (e.g., `.pkl`)
+
+## 📂 Folder Structure
+
 ```
-flask
-pandas
-numpy
-sckit-learn
+Flask/
+├── app.py
+├── static/
+├── templates/
+├── Images/
+│   ├── Login.png
+│   └── Home.png
+│   └── detection_page.png
+├── model/
+│   └── model.pkl
+├── requirements.txt
 ```
 
-#Go into the folder flask
-cd Flask
+## ✅ Setup Instructions
 
-#run Flask
-flask run
-```
+1. **Clone this repo**:
+   ```bash
+   git clone https://github.com/yourusername/nlp-flask-app.git
+   cd Flask
+   ```
 
-### Application:
+2. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate   # On Windows
+   ```
 
-**Login Page**
-![Login Page](Images/Login.png)
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**Home Page**
-![Home Page](Images/Home.png)
+   Or manually:
+   ```bash
+   pip install flask pandas numpy scikit-learn
+   ```
 
-**Detection Page**
-![Detection](Images/detection_page.png)
+4. **Run the app**:
+   ```bash
+   set FLASK_APP=app.py       # On Windows
+   flask run
+   ```
 
+   Or simply:
+   ```bash
+   python app.py
+   ```
 
-### Contributing:
-Feel free to contribute to the project !
-Would love to collaborate and build a better application.
+5. **Visit your browser**:
+   ```
+   http://127.0.0.1:5000
+   ```
+
+## 📊 Model Details
+
+- The text classification is powered by **Logistic Regression**.
+- Input data is preprocessed using basic NLP methods (e.g., lowercasing, removing punctuation, tokenization).
+- Trained model is stored in `/model/model.pkl`.
