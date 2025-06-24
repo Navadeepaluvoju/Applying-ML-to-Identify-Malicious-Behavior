@@ -1,0 +1,111 @@
+.<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="/" class="w3-button w3-bar-item">Home</a>
+  <a href="/classification" class="w3-button w3-bar-item">Predict</a>
+  <a href="/abstract" class="w3-button w3-bar-item">Abstract</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="static/img/cvr.jpg" style="width:100%" "hight:50%">
+  <img class="mySlides" src="static/img/cvr1.jpg" style="width:100%" "hight:50%">
+  <img class="mySlides" src="static/img/cvr2.jpeg" style="width:100%" "hight:50%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide" style="margin-top:40px;">URL Malicious DETECTION </h2>
+</section>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">Welcome {{ user }}</h1>
+                </div>
+                <div class="card-body">
+                    <p class="text-center">Enter the url link of the website to be classified in the below page</p>
+                    <div class="text-center">
+                        <a href="/classification" class="btn btn-primary">Open Website</a>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+</footer>
+</html>
+
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+</style>
+
+
+
+
+<!---
+
+
+{% block body %}
+    <div id="body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="text-center">Welcome {{ user }}</h1>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-center">Enter the url link of the website to be classified in the below page</p>
+                            <div class="text-center">
+                                <a href="/classification" class="btn btn-primary">Classification of webpage</a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+----->

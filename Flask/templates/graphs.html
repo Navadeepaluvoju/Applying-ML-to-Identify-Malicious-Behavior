@@ -1,0 +1,148 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="/" class="w3-button w3-bar-item">Home</a>
+  <a href="/classification" class="w3-button w3-bar-item">Predict</a>
+  <a href="/performance" class="w3-button w3-bar-item">Performance</a>
+  <a href="/logout" class="w3-button w3-bar-item">Logout</a>
+</nav>
+
+<body>
+<div>   
+</div>
+
+
+<h1> Model Training Performance Graphs </h1>
+
+
+<style>
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.item {
+  text-align: center;
+}
+
+.item h4 {
+  margin: 10px 20px 20px 20px;
+}
+
+.item img {
+  max-height: 500px;
+  width: 80%;
+}
+h1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 20px 20px 20px;
+}
+.item p {
+  
+  margin: 10px 20px 20px 20px;
+  text-align: justify;
+  width: 80%;
+  margin-left:40px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item">
+    <h4>Classification Report</h4>
+    <img src="/static/img/cls.jpg" alt="Random Name">
+    <p>A classification report is a concise summary that evaluates the performance of a classification model. It provides key metrics such as precision, recall, and F1 score, which indicate the model's accuracy in predicting different classes. By analyzing these metrics, users can assess the model's effectiveness in correctly classifying instances and identify areas for improvement.</p>
+  </div>
+  
+  <div class="item">
+    <h4>Confusion Matrix</h4>
+    <img src="/static/img/cnf.jpg" alt="Random Name">
+    <p>A confusion matrix is a tabular representation that summarizes the performance of a classification model by comparing predicted labels with actual labels. It consists of four main components: true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN).</p>
+  </div>
+  
+  <div class="item">
+    <h4>Data Distribution</h4>
+    <img src="/static/img/auc.jpg" alt="Random Name">
+    <p>A pie chart visually represents the composition of a whole by dividing it into sectors, each proportional to its corresponding value, providing an easy-to-understand depiction of relative proportions or percentages.</p>
+  </div>
+  
+  <div class="item">
+    <h4>Roc Curve</h4>
+    <img src="/static/img/roc.jpg" alt="Random Name">
+    <p>A ROC (Receiver Operating Characteristic) graph illustrates the performance of a binary classification model across various thresholds by plotting the true positive rate (sensitivity) against the false positive rate (1 - specificity). </p>
+  </div>
+</div>
+
+
+
+</body>
+
+
+<!-- Footer -->
+
+
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+</footer>
+</html>
+
+<style>
+
+</style>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+<!---
+<style>
+
+
+.item {
+  margin: 20px;
+  text-align: center;
+}
+
+.item p {
+  margin-bottom: 10px;
+}
+.item img {
+  max-height: 400px;
+  width:400px;
+}
+h1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>
+--->
